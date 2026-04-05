@@ -11,6 +11,7 @@ import Listening from './pages/Listening.jsx';
 import SpeakingPractice from './pages/SpeakingPractice.jsx';
 import WritingPractice from './pages/WritingPractice.jsx';
 import FloatingCharacters from './components/FloatingCharacters.jsx';
+import Chat from './pages/Chat.jsx';
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
       <main className="flex-1 max-w-4xl w-full mx-auto px-4 py-6">
         <Routes>
           <Route path="/" element={<Dashboard />} />
+          <Route path="/chat" element={<Chat />} />
           <Route path="/flashcards" element={<Flashcards />} />
           <Route path="/grammar" element={<Grammar />} />
           <Route path="/conjugation" element={<Conjugation />} />

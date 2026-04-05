@@ -1,8 +1,9 @@
 import { NavLink } from 'react-router-dom';
-import { LayoutDashboard, BookOpen, Layers, Pencil, Trophy, Settings, MessageSquare, Headphones, Mic, PenLine } from 'lucide-react';
+import { LayoutDashboard, BookOpen, Layers, Pencil, Trophy, Settings, MessageSquare, Headphones, Mic, PenLine, Bot } from 'lucide-react';
 
 const links = [
   { to: '/',            icon: LayoutDashboard, label: 'Home' },
+  { to: '/chat',        icon: Bot,             label: 'Chat' },
   { to: '/flashcards',  icon: Layers,          label: 'Flashcards' },
   { to: '/grammar',     icon: BookOpen,        label: 'Grammar' },
   { to: '/conjugation', icon: Pencil,          label: 'Conjugate' },
