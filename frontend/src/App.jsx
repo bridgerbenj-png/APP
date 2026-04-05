@@ -12,6 +12,7 @@ import SpeakingPractice from './pages/SpeakingPractice.jsx';
 import WritingPractice from './pages/WritingPractice.jsx';
 import FloatingCharacters from './components/FloatingCharacters.jsx';
 import Chat from './pages/Chat.jsx';
+import WorkHistory from './pages/WorkHistory.jsx';
 
 export default function App() {
   return (
@@ -22,6 +23,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/chat" element={<Chat />} />
+          <Route path="/history" element={<WorkHistory />} />
           <Route path="/flashcards" element={<Flashcards />} />
           <Route path="/grammar" element={<Grammar />} />
           <Route path="/conjugation" element={<Conjugation />} />
