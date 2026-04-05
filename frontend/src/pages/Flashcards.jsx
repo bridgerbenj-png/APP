@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { RotateCcw, ChevronRight } from 'lucide-react';
+import { RotateCcw, ChevronRight, Volume2 } from 'lucide-react';
 import { useLocalStorage } from '../hooks/useLocalStorage.js';
 import { vocabData } from '../data/vocab.js';
 import { isDue, calculateNextReview } from '../utils/srs.js';
@@ -132,6 +132,19 @@ export default function Flashcards() {
             {current.example && (
               <p className="text-sm text-slate-500 font-jp text-center px-4">{current.example}</p>
             )}
+            <button
+              onClick={e => {
+                e.stopPropagation();
+                const utt = new SpeechSynthesisUtterance(current.reading);
+                utt.lang = 'ja-JP';
+                utt.rate = 0.85;
+                window.speechSynthesis.cancel();
+                window.speechSynthesis.speak(utt);
+              }}
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-indigo-50 text-indigo-600 hover:bg-indigo-100 transition-colors text-xs font-medium"
+            >
+              <Volume2 size={13} /> Pronounce
+            </button>
           </div>
         </div>
       </div>
