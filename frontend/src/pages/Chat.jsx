@@ -26,7 +26,7 @@ const SUGGESTIONS = [
 
 export default function Chat() {
   const [apiKey] = useLocalStorage('apiKey', '');
-  const [messages, setMessages] = useState([]);
+  const [messages, setMessages] = useLocalStorage('chatHistory', []);
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
