@@ -26,6 +26,12 @@
   }
 }
 
+/* Floating character animation */
+@keyframes floatChar {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-10px); }
+}
+
 /* Smooth card flip animation */
 .flashcard-container {
   perspective: 1000px;
