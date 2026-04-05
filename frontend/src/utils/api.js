@@ -1,4 +1,4 @@
-const API_BASE = 'http://localhost:3001';
+const API_BASE = 'https://app-production-8114.up.railway.app';
 
 export async function callClaude({ messages, systemPrompt, apiKey }) {
   const res = await fetch(`${API_BASE}/api/chat`, {
