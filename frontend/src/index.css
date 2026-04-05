@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-900 font-sans;
+  }
+  .font-jp {
+    font-family: 'Noto Sans JP', sans-serif;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-white rounded-2xl shadow-sm border border-slate-100 p-6;
+  }
+  .btn-primary {
+    @apply bg-indigo-600 hover:bg-indigo-700 text-white font-medium px-4 py-2 rounded-lg transition-colors;
+  }
+  .btn-secondary {
+    @apply bg-slate-100 hover:bg-slate-200 text-slate-700 font-medium px-4 py-2 rounded-lg transition-colors;
+  }
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+}
+
+/* Smooth card flip animation */
+.flashcard-container {
+  perspective: 1000px;
+}
+.flashcard-inner {
+  position: relative;
+  width: 100%;
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+}
+.flashcard-inner.flipped {
+  transform: rotateY(180deg);
+}
+.flashcard-front,
+.flashcard-back {
+  position: absolute;
+  width: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.flashcard-back {
+  transform: rotateY(180deg);
+}
+
+/* Markdown-style prose in grammar explanations */
+.prose-japanese h2 { @apply text-lg font-semibold text-slate-800 mt-5 mb-2; }
+.prose-japanese h3 { @apply text-base font-semibold text-slate-700 mt-4 mb-1; }
+.prose-japanese p  { @apply text-slate-600 leading-relaxed mb-3; }
+.prose-japanese ul { @apply list-disc list-inside text-slate-600 mb-3 space-y-1; }
+.prose-japanese strong { @apply text-slate-800 font-semibold; }
+.prose-japanese code { @apply bg-indigo-50 text-indigo-800 px-1.5 py-0.5 rounded text-sm font-jp; }
+.prose-japanese blockquote { @apply border-l-4 border-indigo-300 pl-4 text-slate-500 italic my-3; }
