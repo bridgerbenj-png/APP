@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import { LayoutDashboard, BookOpen, Layers, Pencil, Trophy, Settings } from 'lucide-react';
+import { LayoutDashboard, BookOpen, Layers, Pencil, Trophy, Settings, MessageSquare, Headphones } from 'lucide-react';
 
 const links = [
   { to: '/',            icon: LayoutDashboard, label: 'Home' },
@@ -7,6 +7,8 @@ const links = [
   { to: '/grammar',     icon: BookOpen,        label: 'Grammar' },
   { to: '/conjugation', icon: Pencil,          label: 'Conjugate' },
   { to: '/quiz',        icon: Trophy,          label: 'Quiz' },
+  { to: '/sentences',   icon: MessageSquare,   label: 'Sentences' },
+  { to: '/listening',   icon: Headphones,      label: 'Listening' },
   { to: '/settings',    icon: Settings,        label: 'Settings' },
 ];
 

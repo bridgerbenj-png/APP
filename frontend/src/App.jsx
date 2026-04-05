@@ -6,6 +6,8 @@ import Grammar from './pages/Grammar.jsx';
 import Conjugation from './pages/Conjugation.jsx';
 import Quiz from './pages/Quiz.jsx';
 import Settings from './pages/Settings.jsx';
+import SentencePractice from './pages/SentencePractice.jsx';
+import Listening from './pages/Listening.jsx';
 
 export default function App() {
   return (
@@ -18,6 +20,8 @@ export default function App() {
           <Route path="/grammar" element={<Grammar />} />
           <Route path="/conjugation" element={<Conjugation />} />
           <Route path="/quiz" element={<Quiz />} />
+          <Route path="/sentences" element={<SentencePractice />} />
+          <Route path="/listening" element={<Listening />} />
           <Route path="/settings" element={<Settings />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
