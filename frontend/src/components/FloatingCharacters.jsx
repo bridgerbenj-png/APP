@@ -83,7 +83,7 @@ export default function FloatingCharacters() {
       {/* Left character — cat sensei */}
       <div
         className="hidden xl:flex fixed flex-col items-center gap-4 z-0 select-none pointer-events-none"
-        style={{ left: '1.5rem', top: '45%', transform: 'translateY(-50%)', animation: 'floatChar 4s ease-in-out infinite' }}
+        style={{ left: 'calc(50% - 576px)', top: '50%', transform: 'translateY(-50%)', animation: 'floatChar 4s ease-in-out infinite' }}
       >
         <SpeechBubble messages={LEFT_MESSAGES} offset={0} />
         <span style={{ fontSize: '3rem', lineHeight: 1, animation: 'floatChar 4s ease-in-out infinite 0.3s' }}>
@@ -94,7 +94,7 @@ export default function FloatingCharacters() {
       {/* Right character — kitsune */}
       <div
         className="hidden xl:flex fixed flex-col items-center gap-4 z-0 select-none pointer-events-none"
-        style={{ right: '1.5rem', top: '55%', transform: 'translateY(-50%)', animation: 'floatChar 4s ease-in-out infinite 1.2s' }}
+        style={{ right: 'calc(50% - 576px)', top: '50%', transform: 'translateY(-50%)', animation: 'floatChar 4s ease-in-out infinite 1.2s' }}
       >
         <SpeechBubble messages={RIGHT_MESSAGES} offset={2500} />
         <span style={{ fontSize: '3rem', lineHeight: 1, transform: 'scaleX(-1)', display: 'inline-block', animation: 'floatChar 4s ease-in-out infinite 1.5s' }}>
