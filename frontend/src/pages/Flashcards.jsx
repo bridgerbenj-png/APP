@@ -117,7 +117,7 @@ export default function Flashcards() {
             <span className={`badge ${TYPE_COLORS[current.type] ?? 'bg-slate-100 text-slate-600'}`}>
               {current.type}{current.group ? ` · ${current.group}` : ''}
             </span>
-            <p className="text-5xl font-jp font-bold text-slate-800">{current.word}</p>
+            <p className="text-5xl font-jp font-bold text-slate-800">{current.reading}</p>
             <p className="text-slate-400 text-sm mt-2">Tap to reveal</p>
           </div>
 
@@ -127,7 +127,7 @@ export default function Flashcards() {
             style={{ height: 280 }}
             onClick={() => setFlipped(false)}
           >
-            <p className="text-2xl font-jp text-indigo-600 font-medium">{current.reading}</p>
+            <p className="text-2xl font-jp text-indigo-600 font-medium">{current.word}</p>
             <p className="text-xl font-semibold text-slate-800">{current.meaning}</p>
             {current.example && (
               <p className="text-sm text-slate-500 font-jp text-center px-4">{current.example}</p>
