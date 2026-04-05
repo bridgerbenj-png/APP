@@ -8,6 +8,8 @@ import Quiz from './pages/Quiz.jsx';
 import Settings from './pages/Settings.jsx';
 import SentencePractice from './pages/SentencePractice.jsx';
 import Listening from './pages/Listening.jsx';
+import SpeakingPractice from './pages/SpeakingPractice.jsx';
+import WritingPractice from './pages/WritingPractice.jsx';
 
 export default function App() {
   return (
@@ -22,6 +24,8 @@ export default function App() {
           <Route path="/quiz" element={<Quiz />} />
           <Route path="/sentences" element={<SentencePractice />} />
           <Route path="/listening" element={<Listening />} />
+          <Route path="/speaking" element={<SpeakingPractice />} />
+          <Route path="/writing" element={<WritingPractice />} />
           <Route path="/settings" element={<Settings />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
