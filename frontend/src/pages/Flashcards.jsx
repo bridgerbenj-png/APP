@@ -106,7 +106,7 @@ export default function Flashcards() {
 
       {/* Flashcard */}
       <div className="flashcard-container" style={{ height: 280 }}>
-        <div className={`flashcard-inner ${flipped ? 'flipped' : ''}`} style={{ height: 280 }}>
+        <div className={`flashcard-inner ${flipped ? 'flipped' : ''}`} key={index} style={{ height: 280 }}>
 
           {/* Front */}
           <div
