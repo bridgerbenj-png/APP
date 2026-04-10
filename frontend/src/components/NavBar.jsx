@@ -4,7 +4,7 @@ import {
   LayoutDashboard, Bot, History,
   MessageSquare, BookOpen, Layers, Pencil,
   Trophy, PenLine, Mic, Headphones,
-  Settings, ChevronDown, Menu, X,
+  Settings, ChevronDown, Menu, X, FileText,
 } from 'lucide-react';
 
 const GROUPS = [
@@ -25,6 +25,7 @@ const GROUPS = [
       { to: '/grammar',     icon: BookOpen,      label: 'Grammar' },
       { to: '/flashcards',  icon: Layers,        label: 'Flashcards' },
       { to: '/conjugation', icon: Pencil,        label: 'Conjugations' },
+      { to: '/notes-to-flashcards', icon: FileText, label: 'Notes to Flashcards' },
     ],
   },
   {

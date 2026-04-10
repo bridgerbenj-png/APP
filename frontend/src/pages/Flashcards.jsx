@@ -21,13 +21,15 @@ const RATINGS = [
 
 export default function Flashcards() {
   const [vocabSRS, setVocabSRS] = useLocalStorage('vocabSRS', {});
+  const [customVocab] = useLocalStorage('customVocab', []);
   const [streak, setStreak]     = useLocalStorage('streak', { count: 0, lastStudied: null });
   const [flipped, setFlipped]   = useState(false);
   const [index, setIndex]       = useState(0);
   const [sessionDone, setSessionDone] = useState(false);
   const [sessionCount, setSessionCount] = useState(0);
 
-  const dueCards = vocabData.filter(v => isDue(vocabSRS[v.id]));
+  const allVocab = [...vocabData, ...customVocab];
+  const dueCards = allVocab.filter(v => isDue(vocabSRS[v.id]));
 
   useEffect(() => {
     setFlipped(false);

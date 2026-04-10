@@ -13,6 +13,7 @@ import WritingPractice from './pages/WritingPractice.jsx';
 import FloatingCharacters from './components/FloatingCharacters.jsx';
 import Chat from './pages/Chat.jsx';
 import WorkHistory from './pages/WorkHistory.jsx';
+import NotesToFlashcards from './pages/NotesToFlashcards.jsx';
 
 export default function App() {
   return (
@@ -32,6 +33,7 @@ export default function App() {
           <Route path="/listening" element={<Listening />} />
           <Route path="/speaking" element={<SpeakingPractice />} />
           <Route path="/writing" element={<WritingPractice />} />
+          <Route path="/notes-to-flashcards" element={<NotesToFlashcards />} />
           <Route path="/settings" element={<Settings />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
